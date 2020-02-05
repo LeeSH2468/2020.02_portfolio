@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* reset_test.css */
+/* reset : 브라우저 세팅(css) 초기화 */
+
+ /* 1.body, html */
+ html,body{width:100%; height:100%; margin:0; padding:0; color:#333;
+          font-family: 'Noto Sans KR', sans-serif, "Gothic A1";}
+ h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd,p,pre,img{margin: 0; padding: 0; border:0;} 
+ ul,ol,li{list-style:none;}
+ table, thead, tbody, tfoot, tr, th, td{ margin:0; padding:0; border-spacing:0; 
+  border-collapse:collapse; border:1px solid #777;}
+                                      
+a{color:#777; text-decoration:none;}
+abbr{text-decoration:none; text-transform:uppercase;}
+button{border:0; cursor:pointer; color:#fff; background-color:transparent;}
+hr{margin:0; padding:0; border-bottom:0.5px solid #ddd;} 
+
+/* html5 ======================================================================  */
+main, header, footer, aside, nav, section, article, figure, figcaption{display:block; margin:0; padding:0}
+
+/* form ======================================================================  */
+form, fieldset, legend{margin:0; padding:0; border:0;}
+legend{position:absolute; width:0; height:0; overflow:hidden;}
+input{box-sizing:border-box; text-indent:0.5rem; cursor: pointer;}
+input[type="text"]:hover,   input[type="password"]:hover,
+input[type="search"]:hover, input[type="url"]:hover,
+input[type="email"]:hover,  input[type="tel"]:hover,
+text-area:hover, select:hover{background-color:#fff;}
+
+input[type="text"]:focus,   input[type="password"]:focus,
+input[type="search"]:focus, input[type="url"]:focus,
+input[type="email"]:focus,  input[type="tel"]:focus,
+text-area:focus, select:focus{background-color: #fff;}
+
+select, text-area{box-sizing:border-box;}
