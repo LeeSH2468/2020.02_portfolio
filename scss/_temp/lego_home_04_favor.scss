@@ -1,0 +1,50 @@
+#favor_area{width: 100%; height: auto; padding:5rem 0; box-sizing: border-box;
+  h2{@include h2;}
+  ul{width: 100%; height: auto; padding:50px; box-sizing:border-box;overflow:hidden;
+    li{position:relative; width: 100%;margin-bottom:3rem;
+      &:nth-child(1){.pic_zone{@include bg_base($url:"../../img/fa_01.jpeg",$s:cover)}}
+      &:nth-child(2){.pic_zone{@include bg_base($url:"../../img/fa_02.png",$s:cover)}}
+    }//li
+    
+  }//ul
+}//#favor_area
+
+// 반응형 ====================================
+
+@include mo_ta{#favor_area{
+  li{height: 40rem;
+  .pic_zone{width: 50vw; min-width:20rem; max-width:28.875rem; height: 50%; margin:auto;}
+  .text_zone{width: 100%; height:50%; text-align: center; margin:auto; padding-top:5rem; box-sizing: border-box;
+    h3{@include h4; margin-bottom:1rem;}
+    p{@include text_18;  margin-bottom:2rem;}
+      }//text_zone
+    .btn{@include btn($black); margin:auto;}
+    }//li
+  }//#favor_area
+}//mo_ta
+
+@include la_pc{#favor_area{
+  li{height: 20rem;
+  .pic_zone{position:absolute; left:40%; z-index:1; width: 462px; height: 100%;  margin:auto; transform:translateX(-70%);
+  &.pic_zone:hover{background-size:auto 110%;}}
+  .text_zone{position:absolute; left:50%; top:0; bottom:0; width: 600px; height: 16rem; padding:3rem; margin:auto; box-sizing:border-box; background-color: $gray;
+    &:before,&::before{content: " "; position:absolute; left:-20%; top:0; display:block; width: 20%; height: 100%; background-color: $gray;}
+    &:after, &::after{content:" "; position: absolute; right:-100%; top:0;display:block; width: 100%; height: 100%; background-color: $gray;}
+  h3{@include h3; margin-bottom:1rem;}
+  p{@include text_20;  margin-bottom:2rem;}
+  .btn{@include btn}
+    }//.text_zone
+    &:nth-child(2n){margin-bottom:0;
+      .pic_zone{left:50%; transform:translateX(0);}
+      .text_zone{left:40%; transform:translateX(-70%);
+        &:before,&::before{width: 100%; left:-100%}
+        &:after, &::after{width: 20%; right:-20%}}
+    }//nth(2n)
+  }//li
+ }//#favoer_area
+}//la_pc
+
+@include mobile{}
+@include tablet{}
+@include labtop{}
+@include pcfull{}

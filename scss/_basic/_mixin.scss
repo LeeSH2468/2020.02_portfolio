@@ -1,0 +1,94 @@
+@mixin h2 {font-size:3rem; font-size:48px; color:$black; text-align: center;  margin-bottom:5rem}
+@mixin h3($c:$black){
+  font-size:30px; font-size:1.875rem; font-weight:bold; color:$c; 
+}
+@mixin h4($c:$black){
+  font-size:26px; font-size:1.625rem; text-transform: uppercase; font-weight:bold; color:$c;
+}
+
+@mixin text_24($c:$black){
+  font-size:24px; font-size:1.5rem; color:$c; word-break:keep-all;
+}
+
+@mixin text_22($c:$black){
+  font-size:22px; font-size:1.375rem; color:$c; word-break:keep-all;
+}
+@mixin text_20($c:$black){
+  font-size:20px; font-size:1.25rem; color:$c; word-break:keep-all;
+}
+@mixin text_18_bold($c:$black){
+  font-size:18px; font-size:1.125rem; font-weight:bold; color:$c; word-break:keep-all;
+}
+@mixin text_18($c:$black){
+  font-size:18px; font-size:1.125rem; color:$c; word-break:keep-all;
+}
+@mixin text_15($c:$black){
+  font-size:15px; font-size:0.9375rem; color:$c; word-break:keep-all;
+}
+@mixin text_12($c:$black){
+  font-size:12px; font-size:0.75rem; color:$c; word-break:keep-all;
+}
+@mixin slide_h3 {font-size:3rem; font-size:48px; color:$black;}
+
+
+@mixin main_bg($h:auto){width: 100%; height: $h; padding:5rem 10%; box-sizing:border-box; }
+
+@mixin aLink{display:block; width: 100%; height: 100%;}
+
+//버튼
+@mixin btn($bc:$white){width: 200px; height: 50px; background-color: $white; border:1px solid $bc; box-sizing: border-box;
+  a{@include aLink; @include text_18_bold; line-height: 3rem; text-align: center;
+   }//a
+   &:hover{background-color: $primary; border:1px solid $primary; box-sizing: border-box;}
+  }//btn
+
+
+ //배경이미지
+ @mixin bg_base($url,$p:50% 50%,$s:contain,$r:no-repeat){
+  background-repeat:$r;
+  background-position:$p;
+  background-size:$s;
+  background-image:url($url);
+}
+@mixin bg_base2($s:contain,$r:no-repeat,$p:50% 50%){
+ background-repeat:$r;
+ background-position:$p;
+ background-size:$s
+}
+@mixin bg_baseJs($s:auto,$r:no-repeat){
+  background-repeat:$r;
+  background-size:$s
+ }
+
+
+ //반응형======================
+
+ @mixin mo_ta{
+  @media screen and (min-width:320px) and (max-width:767px) {@content;}
+  @media screen and (min-width:768px)  and (max-width:1279px) {@content;}
+ }
+ @mixin la_pc{
+  @media screen and (min-width:1280px)  and (max-width:1919px) {@content;} 
+  @media screen and (min-width:1920px) {@content;}
+ }
+ @mixin mobile{
+  @media screen and (min-width:320px) and (max-width:767px) {@content;} 
+ }//모바일
+ @mixin tablet{
+  @media screen and (min-width:768px)  and (max-width:1279px) {@content;} 
+ }//태블릿
+ @mixin labtop{
+  @media screen and (min-width:1280px)  and (max-width:1919px) {@content;} 
+ }//랩탑
+ @mixin pcfull{
+  @media screen and (min-width:1920px) {@content;} 
+ }//pc
+
+// @include mo_ta{}
+// @include la_pc{} 
+// @include mobile{}
+// @include tablet{}
+// @include labtop{}
+// @include pcfull{}
+
+// =========================================================

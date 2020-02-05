@@ -1,0 +1,45 @@
+#cate_area{width: 100%; height: auto; box-sizing:border-box;
+  $w:15rem; $m:6rem;
+  ul{width: ($w * 4) + ($m * 3); height: auto; margin:auto; padding:7rem 0;
+    li{position:relative; float:left; width: $w; height: 25rem; padding:2rem; box-sizing: border-box;
+      &:after,&::after{content:" "; display:block; position: absolute; top:0; width: 5rem; height: 100%;}
+       &:nth-child(2n-1){margin-right:7.5rem;
+        &:after{right:-2.8rem; transform:skewX(10deg);}
+        }//2n-1
+       &:nth-child(2n){background-color:#e88821; text-align:right; margin-right:1.5rem;
+        &:after{left:-2.8rem; transform:skewX(10deg); background-color:#e88821;}}
+        
+        &:nth-child(1){background-color: #007bcd;
+          &:after{background-color: #007bcd;}
+        dt{top:-4rem;left:0; color:#007bcd;}
+        }//nth-child(1)
+        &:nth-child(2){background-color: #81d93e;
+          &:after{background-color: #81d93e;}
+        dt{bottom:-5.6rem;right:0; color:#81d93e;;}
+        }//nth-child(2)
+        &:nth-child(3){background-color: #ffb41d;
+          &:after{background-color: #ffb41d;}
+        dt{top:-4rem; left:0;color:#ffb41d;}
+        }//nth-child(3)
+        &:nth-child(4){background-color: #383838;
+          &:after{background-color: #383838;}
+        dt{bottom:-5.6rem;right:0; color: #383838;}
+        }//nth-child(4)
+
+
+      &:last-child{margin-right:0}
+      dl{width: auto; height: auto;
+        dt{position:absolute;font-size:3rem; font-size:48px; text-transform: uppercase; margin-bottom:2rem; font-weight: bold;}
+        dd{@include text_20; line-height: 2.4rem;
+          a{width: auto;height: auto; color: $white;
+          &:hover{text-decoration: underline;}}}
+      }//dl
+    }//li
+  }//ul
+}//cate_area
+
+// 반응형 ====================================
+@include mo_ta{#cate_area{display:none;}}
+@include labtop{#cate_area{padding:5rem 0;}
+}
+@include pcfull{#cate_area{padding:5rem 10%;}}

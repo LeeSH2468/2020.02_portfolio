@@ -1,0 +1,20 @@
+#view_area{@include main_bg; @include bg_base("../../img/viewpic.jpg",$s:auto 100%);
+  .view_bg{position:relative; width: 100%;
+    >div{@include bg_base2;}
+  .view_logo01{position:absolute;top:0; left:-10rem; width: 46.5rem; height: 327px; background-image: url("../../img/viewlogo01.png");opacity: 0;}
+  .view_logo02{position:absolute;top:6rem; left:20rem; width: 17.5rem; height: 30px; background-image: url("../../img/viewlogo02.png");opacity: 0;}
+  .view_pig01{position:absolute;top:15rem; right:35rem; width: 18.75rem; height: 240px;background-image: url("../../img/viewpic03.png");opacity: 0;}
+  .view_pig02{position:absolute;top:6rem; right:15rem; width: 25.75rem; height: 216px; background-image: url("../../img/viewpic02.png");opacity: 0;}
+  .view_pig03{position:absolute; top:15rem; right:20rem; width: 51.25rem; height: 25rem; background-image: url("../../img/viewpic01.png");opacity: 0;}}
+  .btn{position:absolute; top:28rem; left:8rem;width: 27rem; height: 4rem;opacity: 0;
+    >a{display:block; float:left; width: 12.5rem; height: 100%; @include text_20; font-weight:bold; line-height: 4rem; text-align: center; background-color: $white; border:1px solid $white; box-sizing: border-box;
+    &:first-child{margin-right:1.875rem;}
+    &:hover{background-color: $primary; border:1px solid $primary; box-sizing: border-box;}}
+  }
+}//#view_area
+
+// 반응형 ====================================
+@include mobile{.view_bg{height: 20rem;}}
+@include tablet{.view_bg{height: 30rem;}}
+@include labtop{.view_bg{height: 40rem;}}
+@include pcfull{.view_bg{height: 50rem;}}

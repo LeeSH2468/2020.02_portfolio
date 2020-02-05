@@ -1,0 +1,16 @@
+@import "./_basic/mixin";
+@import "./_basic/var";
+
+#wrap{width: 100%; height: 100%;}
+#headBox{width: 100%;}
+#conBox{width: 100%; height: auto;}
+#footBox{width: 100%; height: auto;}
+
+@import "./_temp/lego_header.scss";
+@import "./_temp/lego_home_01_view.scss";
+@import "./_temp/lego_home_02_cate.scss";
+@import "./_temp/lego_home_03_slide.scss";
+@import "./_temp/lego_home_04_favor.scss";
+@import "./_temp/lego_home_05_set.scss";
+@import "./_temp/lego_home_06_trend.scss";
+@import "./_temp/lego_footer.scss";

@@ -1,0 +1,49 @@
+#set_area{@include main_bg; 
+  h2{@include h2}
+  .s_form{position:relative; width: 100%; height: 32rem; overflow: hidden;
+    .s_btn{position:absolute; width: 100%; height: 0; margin-top: 15rem; padding:0 0rem; box-sizing: border-box;
+      button{position: absolute; width: 2.5rem; height: 4.0625rem; font-size: 3.4rem; color:$primary;
+      &.next{right:0;}
+      &.prev{display:none; left:0;}
+      }//button
+    }//s_btn
+    .guide{height: 100%; margin-bottom:10rem;
+      >li{float:left; height: 100%;
+        >ul{width:100%; height: 100%;
+          >li{float:left; height: 100%; padding: 2rem;border-right:1px solid $border_g; box-sizing: border-box; 
+          &:last-child{margin-right: 0; border:0;}
+          .pic_zone{width: 100%; height: 15rem; margin-bottom:2rem; @include bg_base2;}
+          .text_zone{width: auto; height: auto;
+            h3{width:100%; height: 3.5rem; @include text_22; margin-bottom:2rem;}
+            .price{@include text_20; margin-bottom:2rem;}
+            >.btn{width: 12.5rem; height: auto;margin:auto;
+              button{@include btn; border:1px solid $black; @include text_18_bold; }}
+             }//text_zone
+            }//li
+          }//ul
+        }//li
+
+    }//ul.guide
+  }//.s_form
+  
+}//set_area
+
+// 반응형 ====================================
+
+@include mo_ta{
+  $c:3;
+.guide{width: 100%*$c;
+  li{float:left; width: 100%/$c;
+  }}
+}
+@include la_pc{
+  $c:4;
+  .guide{width: 100%*$c;
+      li{width: 100%/$c;
+      }}
+}
+
+@include mobile{}
+@include tablet{}
+@include labtop{}
+@include pcfull{}

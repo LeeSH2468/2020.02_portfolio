@@ -1,0 +1,75 @@
+#gnb{width: 100%; height: 90px; background-color: $primary; padding:18px 10%; box-sizing:border-box;
+  h1{float: left; width: 55px; height: 55px; 
+    >a{@include aLink; @include bg_base($url:"../../img/lego_logo.gif");}
+  }
+  ul{float: left; width: auto; height: auto; margin-left:10rem; margin-right:10rem;
+    li{float: left; width: auto; height: auto; margin-right:3rem;
+      &:last-child{margin-right:0;}
+      a{@include aLink; @include text_20; font-weight: 600; line-height: 3rem;
+      &:hover{@include text_22;}}
+    } //li
+  }//ul
+  form{display:block; float:right; width: auto; height: auto;
+    .search_box{position:relative; width: auto; height: 3rem;
+    input[type=search]{float:left; width: 20rem; height: 100%; border:0; border-radius: 2rem;
+    &:focus{ border:1px; border-radius: 2rem; }}
+    .search_btn{float:left; width: 2rem; height: 100%; margin-left:1rem;
+     button{position:absolute; right:4rem; font-size: 1.5rem; line-height: 3rem; color:$primary;}}
+    }//.search_box
+  }//form
+}//#gnb
+
+#unb{position: absolute; top:0; left:0; width: 100%; height: 40px; background-color: $white;
+ul{width: 100%; height: 100%;box-sizing: border-box;
+  li{float:left; width: 50%; height: 100%;
+    &.link_menu{float:left;
+      >ul{width: auto; height: 100%;  padding:0 5rem;   
+        >li{float: left; width: auto; height: 100%; margin-right:2rem;
+          &:last-child{margin-right: 0;}
+        >a{@include aLink;   color:$black; @include text_12; font-weight: bold; line-height: 2.5rem; text-transform: uppercase;
+          &:hover{text-decoration: underline;}
+          &:before,&::before{content:" "; display:block; float:left; width: 40px; height: 100%; margin-right:0.1rem; @include bg_base2($s:70% auto);}}
+        &:nth-child(1) > a:before,a::before{background-image: url('../../img/lego_korea.png');}
+        &:nth-child(2) > a:before,a::before{background-image: url('../../img/lego_com.png');}
+        &:nth-child(3) > a:before,a::before{background-image: url('../../img/lego_vip.png');}
+        &:nth-child(4) > a:before,a::before{background-image: url('../../img/lego_life.png');}
+      }
+       }}
+    &.user_menu{float:right; width: 28%; height: 100%;
+    >ul{width: 100%; height: 100%;
+      >li{float: left; width: auto; height: 100%; margin-right:1rem; 
+        &:last-child{margin-right: 0;}
+      >a{@include aLink;   color:$black; @include text_12; line-height: 2.5rem;
+      &:hover{text-decoration: underline;}
+      &:before,&::before{content:" "; display:block; float:left; width: 40px; height: 100%; margin-right:0.1rem; @include bg_base2($s:70% auto);}}
+      &:nth-child(1) > a:before,a::before{background-image: url('../../img/lego_login.png');}
+      &:nth-child(2) > a:before,a::before{background-image: url('../../img/lego_wish.png');}
+      &:nth-child(3) > a:before,a::before{background-image: url('../../img/lego_shping.png');}
+      }
+     }
+    }
+  }//li
+}//ul
+
+}//#unb
+
+
+// ======================
+
+@include mo_ta{#unb{display:none;}
+  #gnb{
+    ul{display:none;}
+    form{display:none;}
+  }
+}
+@include la_pc{#gnb{margin-top:40px;}}
+
+@include mobile{}
+@include tablet{}
+@include labtop{
+  #gnb{
+  ul{display:none;}
+  form{display:none;}
+  }
+}//labtop
+@include pcfull{}

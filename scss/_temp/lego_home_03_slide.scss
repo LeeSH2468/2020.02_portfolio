@@ -1,0 +1,41 @@
+#slide_area{position: relative; width: 100%; height: 35rem;
+  $w:1.5rem; $m:1.25rem; $aw:4rem;
+  .indi{position:absolute; left:0; right:0; bottom:2rem; z-index:1; width: auto; height: auto; 
+    >ul{width: ($w *4 + $aw) + ($m * 3); height: auto; margin:auto;
+      >li{float:left; width: $w; height: $w; margin-right:$m; background-color: $white; border-radius: $w;
+      &:last-child{margin-right:0;}
+    &.action{width: $w + $aw; background-color: $primary;}//action
+      }//li
+    }//ul
+  }//.indi
+  .s_btn{position:absolute; width: 100%; height: 0; margin-top: 17.5rem;padding:0 5rem; box-sizing: border-box;
+    button{width: 2.5rem; height: 4.0625rem; font-size: 3.4rem;
+    &:first-child{float:right;}
+    &:last-child{float:left;}
+    }//button
+  }//s_btn
+  .s_form{width: 100%; height: 100%; overflow: hidden;
+    $c:4;
+    .guide{width: 100% * $c; height: 100%;
+      li{float:left; width: 100%/$c; height: 100%;
+        >.text_area{width: 40rem; height: auto; margin-top:7rem; margin-left:15rem;
+      h3{display:block; width: auto; height: auto; @include slide_h3; color:$black; line-height:4rem;}
+      p{display:block; width: auto; height: auto; @include text_20; color:$black;margin-top:2rem;}
+      .btn{@include btn; margin-top:5rem; border: 1px solid $black;}
+      }
+      }//li
+      .slide_01{@include bg_base("../../img/slide01.jpeg",$s:100% auto);}
+      .slide_02{@include bg_base("../../img/s_02.jpg",$s:100% auto);}
+      .slide_03{@include bg_base("../../img/s_03.jpg",$s:100% auto);}
+      .slide_04{@include bg_base("../../img/s_04.jpg",$s:100% auto);}
+
+    }//ul.guide
+  }//.s_form
+
+}//slide_area
+
+// 반응형 ====================================
+@include mobile{}
+@include tablet{}
+@include labtop{}
+@include pcfull{}
