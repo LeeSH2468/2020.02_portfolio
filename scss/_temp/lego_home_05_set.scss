@@ -17,7 +17,8 @@
             h3{width:100%; height: 3.5rem; @include text_22; margin-bottom:2rem;}
             .price{@include text_20; margin-bottom:2rem;}
             >.btn{width: 12.5rem; height: auto;margin:auto;
-              button{@include btn; border:1px solid $black; @include text_18_bold; }}
+              button{@include btn; border:1px solid $black; @include text_18_bold;color: $white; background-color: $black;
+              &:hover{color:$black;}}}
              }//text_zone
             }//li
           }//ul

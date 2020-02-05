@@ -7,7 +7,7 @@ const setLi = setUl.children('li');
 
 let addUl = '<ul></ul>';
 let addDiv = '<li><div class="pic_zone"></div><div class="text_zone"><h3></h3><p class="price"></p><div class="btn"><button type="button">사러가기</button></div></li>';
-let imgUrl = '../../img/';
+let imgUrl = '../img/';
 
 const sList = [
   {
@@ -121,6 +121,8 @@ n=0;
 const setBtn = setForm.children('.s_btn').find('button');
 setBtn.on('click',function(e){
   e.preventDefault();
+  $(this).attr("disabled",true);
+  setTimeout(function(){$(this).removeAttr("disabled");},500)
   let hNext = $(this).hasClass('next');
   let hPrev = $(this).hasClass('prev');
 

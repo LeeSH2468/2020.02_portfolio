@@ -961,7 +961,9 @@
                   font-size: 1.125rem;
                   font-weight: bold;
                   color: #171717;
-                  word-break: keep-all; }
+                  word-break: keep-all;
+                  color: #fff;
+                  background-color: #171717; }
                   #set_area .s_form .guide > li > ul > li .text_zone > .btn button a {
                     display: block;
                     width: 100%;
@@ -977,6 +979,8 @@
                     background-color: #ffcf00;
                     border: 1px solid #ffcf00;
                     box-sizing: border-box; }
+                  #set_area .s_form .guide > li > ul > li .text_zone > .btn button:hover {
+                    color: #171717; }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .guide {

@@ -64,7 +64,6 @@ sBtn.on('click',function(e){
   e.preventDefault();
   Stopslide();
   let hNext = $(this).hasClass('next');
-  let hPrev = $(this).hasClass('prev');
 
   if(hNext){
     n++;
@@ -74,8 +73,8 @@ sBtn.on('click',function(e){
         sFormUl.css({'marginLeft':(-100 *n)+'%'});
         }
     });
-    MoveSlide();
-  }else if(hPrev){
+    MoveSlide(n, true);
+  }else{
     n--;
     sFormUl.stop().animate({'marginLeft':(-100 * n) + '%'},function(){
       if(n <=-1){
