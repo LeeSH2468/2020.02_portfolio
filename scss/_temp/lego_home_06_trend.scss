@@ -5,7 +5,7 @@
     .zone_f{width: auto; height: auto;
       >li{width: 100%; height: auto; background-color: #ddd;
     .pic_zone{padding:0 3rem; box-sizing: border-box;
-      .pic{width: 100%; height: 100%; @include bg_base("../../img/t_04_friend.jpeg",$s:100% auto);}
+      .pic{width: 100%; height: 100%; @include bg_base("../img/t_04_friend.jpeg",$s:100% auto);}
       }//pic_zone
       .text_zone{height: auto;
       padding:5vw 2rem; box-sizing: border-box;
