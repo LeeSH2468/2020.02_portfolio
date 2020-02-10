@@ -13,7 +13,7 @@
           >li{float:left; height: 100%; padding: 2rem;border-right:1px solid $border_g; box-sizing: border-box; 
           &:last-child{margin-right: 0; border:0;}
           .pic_zone{width: 100%; height: 15rem; margin-bottom:2rem; @include bg_base2;}
-          .text_zone{width: auto; height: auto;
+          .text_zone{width: 100%; height: auto;
             h3{width:100%; height: 3.5rem; @include text_22; margin-bottom:2rem;}
             .price{@include text_20; margin-bottom:2rem;}
             >.btn{width: 12.5rem; height: auto;margin:auto;

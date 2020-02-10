@@ -332,6 +332,27 @@
     height: 25rem;
     transform: rotate(-6deg);
     margin-top: 12rem; }
+    #sub_slide01 .sub_box .sub_car {
+      position: absolute;
+      top: -5rem;
+      width: 100%;
+      height: 5rem; }
+      #sub_slide01 .sub_box .sub_car > div {
+        position: absolute;
+        width: 8rem;
+        height: 5rem; }
+        #sub_slide01 .sub_box .sub_car > div.car01 {
+          left: 2rem;
+          background-image: url("../../img/car01.png"); }
+        #sub_slide01 .sub_box .sub_car > div.car02 {
+          left: 50rem;
+          background-image: url("../../img/car02.png"); }
+        #sub_slide01 .sub_box .sub_car > div.car03 {
+          left: 20rem; }
+        #sub_slide01 .sub_box .sub_car > div.car04 {
+          left: 43rem; }
+        #sub_slide01 .sub_box .sub_car > div.car05 {
+          left: 4rem; }
     #sub_slide01 .sub_box ul {
       width: 320rem;
       height: 100%; }
@@ -966,7 +987,7 @@
               background-position: 50% 50%;
               background-size: contain; }
             #set_area .s_form .guide > li > ul > li .text_zone {
-              width: auto;
+              width: 100%;
               height: auto; }
               #set_area .s_form .guide > li > ul > li .text_zone h3 {
                 width: 100%;

@@ -4,7 +4,6 @@ const sub01Ul = sub01Box.children('ul');
 let sub01Li = sub01Ul.children('li');
 
 let liWidth = sub01Li.eq(0).outerWidth(true);
-let ulWidth = sub01Ul.outerWidth(true);
 
 sub01Li.eq(-1).prependTo(sub01Ul);
 sub01Li = sub01Ul.children('li');
@@ -22,7 +21,7 @@ const Gosub = function(){
         $(this).children().eq(0).appendTo(sub01Ul);
         sub01Ul.css({marginLeft:0});}
     });
-  });
+  },10);
 };
 
 const Stopsub = function(){clearInterval(start);}
@@ -32,5 +31,20 @@ Gosub();
 sub01Ul.on('mouseenter',function(){Stopsub();});
 sub01Ul.on('mouseleave',function(){Gosub();});
 
+//car
 
+const subCar = sub01Box.children('.sub_car');
+const carPic = subCar.children('div');
+let ulWidth = sub01Box.outerWidth(true);
+
+
+
+carPic.on('mouseenter',function(){$(this).stop().animate({'top':'-2.8rem'})});
+carPic.on('mouseleave',function(){$(this).stop().animate({'top':'0rem'})});
+
+for(let a=0;a<ulWidth;a++){
+  for(let b=0;b<carPic.length;b++){
+    carPic.eq(b).animate({'left':a + 'px'},1.1);
+  }
+}
 

@@ -1,5 +1,14 @@
 #sub_slide01{width: 100%; height: 45rem;overflow: hidden;
   .sub_box{width: 100%; height: 25rem;  transform: rotate(-6deg); margin-top:12rem;
+    .sub_car{position:absolute; top:-5rem; width: 100%; height: 5rem;
+    >div{position:absolute; width: 8rem; height: 5rem;
+      &.car01{left:2rem;background-image: url("../../img/car01.png");}
+      &.car02{left:50rem;background-image: url("../../img/car02.png");}
+      &.car03{left:20rem;}
+      &.car04{left:43rem;}
+      &.car05{left:4rem;}
+    }
+  }//sub_car
   $w:3;
   ul{width: 320rem; height: 100%; 
     li{float:left; width: 30rem; height: 100%;@include bg_base2($s:auto 100%);
