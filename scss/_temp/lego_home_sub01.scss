@@ -1,0 +1,17 @@
+#sub_slide01{width: 100%; height: 45rem;overflow: hidden;
+  .sub_box{width: 100%; height: 25rem;  transform: rotate(-6deg); margin-top:12rem;
+  $w:3;
+  ul{width: 320rem; height: 100%; 
+    li{float:left; width: 30rem; height: 100%;@include bg_base2($s:auto 100%);
+      &.sub01{background-image: url('../../img/pic01.jpeg');}
+      &.sub02{background-image: url('../../img/pic02.jpeg');}
+      &.sub03{background-image: url('../../img/pic03.jpg');}
+      &.sub04{background-image: url('../../img/pic04.jpg');}
+      &.sub05{background-image: url('../../img/pic05.jpg');}
+      &.sub06{background-image: url('../../img/pic06.jpg');}
+      &.sub07{background-image: url('../../img/pic07.jpeg');}
+      &.sub08{background-image: url('../../img/pic08.jpeg');}
+      }//li
+    }//ul
+  }//.sub_box
+}//#sub_slide01

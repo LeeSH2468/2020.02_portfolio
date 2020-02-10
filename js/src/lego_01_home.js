@@ -17,6 +17,7 @@ header.load(htmlUrl + 'lego_header.html',function(){
 // content ==
 content.load(htmlUrl + 'lego_01_con.html',function(){
   body.append('<script src="' + jsUrl + 'lego_h_01_view.js"></script>');
+  body.append('<script src="' + jsUrl + 'lego_h_sub01.js"></script>');
   body.append('<script src="' + jsUrl + 'lego_h_02_cate.js"></script>');
   body.append('<script src="' + jsUrl + 'lego_h_03_slide.js"></script>');
   body.append('<script src="' + jsUrl + 'lego_h_04_favor.js"></script>');

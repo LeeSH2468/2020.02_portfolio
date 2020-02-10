@@ -121,8 +121,8 @@ n=0;
 const setBtn = setForm.children('.s_btn').find('button');
 setBtn.on('click',function(e){
   e.preventDefault();
-  $(this).attr("disabled",true);
-  setTimeout(function(){$(this).removeAttr("disabled");},500)
+  setBtn.attr("disabled",true);
+  setTimeout(function(){setBtn.removeAttr("disabled");},500)
   let hNext = $(this).hasClass('next');
   let hPrev = $(this).hasClass('prev');
 

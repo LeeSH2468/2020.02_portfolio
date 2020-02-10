@@ -323,6 +323,42 @@
   .view_bg {
     height: 50rem; } }
 
+#sub_slide01 {
+  width: 100%;
+  height: 45rem;
+  overflow: hidden; }
+  #sub_slide01 .sub_box {
+    width: 100%;
+    height: 25rem;
+    transform: rotate(-6deg);
+    margin-top: 12rem; }
+    #sub_slide01 .sub_box ul {
+      width: 320rem;
+      height: 100%; }
+      #sub_slide01 .sub_box ul li {
+        float: left;
+        width: 30rem;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: auto 100%; }
+        #sub_slide01 .sub_box ul li.sub01 {
+          background-image: url("../../img/pic01.jpeg"); }
+        #sub_slide01 .sub_box ul li.sub02 {
+          background-image: url("../../img/pic02.jpeg"); }
+        #sub_slide01 .sub_box ul li.sub03 {
+          background-image: url("../../img/pic03.jpg"); }
+        #sub_slide01 .sub_box ul li.sub04 {
+          background-image: url("../../img/pic04.jpg"); }
+        #sub_slide01 .sub_box ul li.sub05 {
+          background-image: url("../../img/pic05.jpg"); }
+        #sub_slide01 .sub_box ul li.sub06 {
+          background-image: url("../../img/pic06.jpg"); }
+        #sub_slide01 .sub_box ul li.sub07 {
+          background-image: url("../../img/pic07.jpeg"); }
+        #sub_slide01 .sub_box ul li.sub08 {
+          background-image: url("../../img/pic08.jpeg"); }
+
 #cate_area {
   width: 100%;
   height: auto;
@@ -542,7 +578,7 @@
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: 100% auto;
-        background-image: url("../../img/s_02.jpg"); }
+        background-image: url("../../img/s_02.jpeg"); }
       #slide_area .s_form .guide .slide_03 {
         background-repeat: no-repeat;
         background-position: 50% 50%;
