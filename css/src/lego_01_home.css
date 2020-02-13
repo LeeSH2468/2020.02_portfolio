@@ -339,20 +339,35 @@
       height: 5rem; }
       #sub_slide01 .sub_box .sub_car > div {
         position: absolute;
-        width: 8rem;
-        height: 5rem; }
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100% auto; }
         #sub_slide01 .sub_box .sub_car > div.car01 {
           left: 2rem;
+          width: 11.5rem;
+          height: 3.8125rem;
           background-image: url("../../img/car01.png"); }
         #sub_slide01 .sub_box .sub_car > div.car02 {
           left: 50rem;
+          width: 10.6875rem;
+          height: 3.75rem;
           background-image: url("../../img/car02.png"); }
         #sub_slide01 .sub_box .sub_car > div.car03 {
-          left: 20rem; }
+          left: 20rem;
+          width: 11.6875rem;
+          height: 3.1875rem;
+          background-image: url("../../img/car03.png"); }
         #sub_slide01 .sub_box .sub_car > div.car04 {
-          left: 43rem; }
+          left: 73rem;
+          width: 11.625rem;
+          height: 3.75rem;
+          background-image: url("../../img/car04.png"); }
         #sub_slide01 .sub_box .sub_car > div.car05 {
-          left: 4rem; }
+          left: 90rem;
+          width: 12.1875rem;
+          height: 4.125rem;
+          background-image: url("../../img/car05.png"); }
     #sub_slide01 .sub_box ul {
       width: 320rem;
       height: 100%; }
@@ -368,7 +383,7 @@
         #sub_slide01 .sub_box ul li.sub02 {
           background-image: url("../../img/pic02.jpeg"); }
         #sub_slide01 .sub_box ul li.sub03 {
-          background-image: url("../../img/pic03.jpg"); }
+          background-image: url("../../img/pic03.jpeg"); }
         #sub_slide01 .sub_box ul li.sub04 {
           background-image: url("../../img/pic04.jpg"); }
         #sub_slide01 .sub_box ul li.sub05 {

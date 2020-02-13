@@ -9,7 +9,7 @@ sub01Li.eq(-1).prependTo(sub01Ul);
 sub01Li = sub01Ul.children('li');
 sub01Ul.css({position:'relative', left : -liWidth + -10+'px'});
 
-//자동
+//자동 슬라이드
 n = 0;
 let start;
 const Gosub = function(){
@@ -39,8 +39,8 @@ let ulWidth = sub01Box.outerWidth(true);
 
 
 
-carPic.on('mouseenter',function(){$(this).stop().animate({'top':'-2.8rem'})});
-carPic.on('mouseleave',function(){$(this).stop().animate({'top':'0rem'})});
+carPic.on('mouseenter',function(){$(this).stop().animate({'bottom':'2.8rem'})});
+carPic.on('mouseleave',function(){$(this).stop().animate({'bottom':'0rem'})});
 
 for(let a=0;a<ulWidth;a++){
   for(let b=0;b<carPic.length;b++){
