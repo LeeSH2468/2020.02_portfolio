@@ -1,12 +1,17 @@
 #sub_slide01{width: 100%; height: 45rem;overflow: hidden;
   .sub_box{width: 100%; height: 25rem;  transform: rotate(-6deg); margin-top:12rem;
-    .sub_car{position:absolute; top:-5rem; width: 100%; height: 5rem;
-    >div{position:absolute; bottom:0; @include bg_base2($s:100% auto);
-      &.car01{left:2rem;width: 11.5rem; height: 3.8125rem; background-image: url("../../img/car01.png");}
-      &.car02{left:50rem;width: 10.6875rem; height: 3.75rem;background-image: url("../../img/car02.png");}
-      &.car03{left:20rem;width: 11.6875rem; height: 3.1875rem;background-image: url("../../img/car03.png");}
-      &.car04{left:73rem;width: 11.625rem; height: 3.75rem;background-image: url("../../img/car04.png");}
-      &.car05{left:90rem;width: 12.1875rem; height: 4.125rem;background-image: url("../../img/car05.png");}
+    .sub_car{position:absolute; top:-4.2rem; width: 100%; height: 5rem;
+    >div{position:absolute; width: 13rem; height: 100%; bottom:0;@include bg_base2($s:100% auto);transform:translate(-13rem);
+      &.car01{background-image: url("../../img/car-01.png");
+      &:hover{background-image: url("../../img/car-06.png");}}
+      &.car02{background-image: url("../../img/car-02.png");
+      &:hover{background-image: url("../../img/car-07.png");}}
+      &.car03{background-image: url("../../img/car-03.png");
+      &:hover{background-image: url("../../img/car-08.png");}}
+      &.car04{background-image: url("../../img/car-04.png");
+      &:hover{background-image: url("../../img/car-09.png");}}
+      &.car05{background-image: url("../../img/car-05.png");
+      &:hover{background-image: url("../../img/car-10.png");}}
     }
   }//sub_car
   $w:3;
@@ -24,3 +29,8 @@
     }//ul
   }//.sub_box
 }//#sub_slide01
+
+//==============================
+@include mo_ta{
+  #sub_slide01{display: none;}
+}

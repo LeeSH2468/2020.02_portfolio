@@ -1,4 +1,4 @@
-$w:10rem; $m:6rem;
+$w:8.2rem; $m:6rem;
 .email_area{width: 100%; height: 15rem; padding:1.4rem; box-sizing: border-box; background-color: $gray;
   h3{@include h3; text-align: center; margin-bottom:1rem;}
   p{@include text_15; font-weight: bold; text-align: center; margin-bottom:2.5rem;}
@@ -13,12 +13,12 @@ $w:10rem; $m:6rem;
   }//form
 } //.email_area
 .foot_nav{width: 100%; height: 100%; padding:1.4rem; box-sizing: border-box;background-color: $bg_gray; 
-  >ul{height: auto; margin:auto; 
+  >ul{height: auto; margin:auto;
     >li{width: auto; height: auto;
     &:last-child{margin-right:0;}
-      dl{
+      dl{width: auto; height: auto;
         dt{font-weight: bold; text-transform: uppercase;}
-        dd{width: auto; height: auto; line-height:1.8rem; @include text_18;
+        dd{width: auto; height: auto; line-height:1.8rem; @include text_15;
         a{@include aLink;}} 
       }//dl
     }//li
@@ -52,9 +52,12 @@ $w:10rem; $m:6rem;
   }
   .foot_nav{
     dl{width: 100%; text-align: center;@include text_18; border-bottom:1px solid $border_g;
-      dt{width: 100%; height: 5rem; line-height:5rem;}
+      dt{width: 100%; height: 5rem; line-height:5rem;
+        button{font-weight: bold; text-transform: uppercase; color:$black; @include text_18}}
       dd{display:none;
-      &:last-child{margin-bottom:2rem;}}
+      &:last-child{margin-bottom:2rem;}
+      a{@include text_15;}
+      }//dd
     }
   }//foot_nav
   .company_info{

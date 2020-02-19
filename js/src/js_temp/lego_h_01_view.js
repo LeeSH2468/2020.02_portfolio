@@ -6,9 +6,9 @@ const viewPig02 = viewArea.find('.view_pig02');
 const viewPig03 = viewArea.find('.view_pig03');
 const viewBtn = viewArea.find('.btn');
 
-viewArea.on('mouseenter',function(){
-  viewPig03.animate({opacity:1,right:0},100,function(){
-    viewPig02.animate({opacity: 1,right:'5rem'},50,function(){
+viewArea.ready(function(){
+  viewPig03.animate({opacity:1,right:0},200,function(){
+    viewPig02.animate({opacity: 1,right:'5rem'},100,function(){
       viewPig01.animate({opacity: 1,right:'45rem'},200,function(){
         viewLogo02.animate({opacity:1,left:'32rem'});
         viewLogo01.animate({opacity:1,left:0},100,function(){

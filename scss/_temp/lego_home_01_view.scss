@@ -1,3 +1,13 @@
+@include mo_ta{#view_area{width: 100%; height: 40rem; @include bg_base("../../img/viewpic.jpg",$s:auto 100%);
+  .view_bg{position: relative; width: 100%; height: 100%; padding-top:2rem; box-sizing: border-box;
+    div{display: none;}
+    .view_logo01{display:block; min-width: 20rem; margin:auto; @include bg_base("../../img/viewlogoall.png");}
+    .view_pig01{display:block; min-width: 20rem; margin:auto;@include bg_base("../../img/viewpicall.png");}
+    .btn{display:block;}
+    }//view_bg
+  }//#vies_area
+}//mo_ta
+@include la_pc{
 #view_area{@include main_bg; @include bg_base("../../img/viewpic.jpg",$s:auto 100%);
   .view_bg{position:relative; width: 100%;
     >div{@include bg_base2;}
@@ -11,10 +21,31 @@
     &:first-child{margin-right:1.875rem;}
     &:hover{background-color: $primary; border:1px solid $primary; box-sizing: border-box;}}
   }
-}//#view_area
+ }//#view_area
+}//la_pc
 
 // 반응형 ====================================
-@include mobile{.view_bg{height: 20rem;}}
-@include tablet{.view_bg{height: 30rem;}}
+@include mobile{
+  #view_area{
+  .view_logo01{width: 100%; height: 25%;}
+  .view_pig01{width: 100%; height: 50%;}
+  .btn{display: block; position:absolute; bottom:6rem; left:0; right:0;width: 100%; height: 3rem;
+    >a{display:block; width: 10rem; height: 100%; margin:auto; @include text_18; font-weight:bold; line-height: 3rem; text-align: center; background-color: $white; border:1px solid $white; box-sizing: border-box;
+    &:first-child{margin-bottom:1rem;}
+    &:hover{background-color: $primary; border:1px solid $primary; box-sizing: border-box;}}
+      }//btn
+    }
+}
+@include tablet{
+  #view_area{
+    .view_logo01{width: 100%; height: 30%;}
+    .view_pig01{width: 100%; height: 50%;}
+    .btn{display: block; position:absolute; bottom:3rem; left:0; right:0;width: 22rem; height: 3rem; margin:auto;
+      >a{display:block; float:left; width: 10rem; height: 100%; margin:auto; @include text_18; font-weight:bold; line-height: 3rem; text-align: center; background-color: $white; border:1px solid $white; box-sizing: border-box;
+      &:first-child{margin-right:1.5rem;}
+      &:hover{background-color: $primary; border:1px solid $primary; box-sizing: border-box;}}
+        }//btn
+      }
+}
 @include labtop{.view_bg{height: 40rem;}}
 @include pcfull{.view_bg{height: 50rem;}}

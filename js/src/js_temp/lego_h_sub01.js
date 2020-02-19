@@ -37,14 +37,19 @@ const subCar = sub01Box.children('.sub_car');
 const carPic = subCar.children('div');
 let ulWidth = sub01Box.outerWidth(true);
 
+ const MyMv = function(n, a){
+  let r = parseInt(Math.random()*50000);
+  carPic.eq(n).animate({'left':a + 'px'},r, function(){
+    $(this).css('left',-100+'px');
+    if( parseInt($(this).css('left')) < 0) {MyMv(n, a);}
+  });
+
+ }
+
+ for(let a=0; a<carPic.length; a++){
+    MyMv(a,ulWidth+500);
+ }
 
 
-carPic.on('mouseenter',function(){$(this).stop().animate({'bottom':'2.8rem'})});
-carPic.on('mouseleave',function(){$(this).stop().animate({'bottom':'0rem'})});
 
-for(let a=0;a<ulWidth;a++){
-  for(let b=0;b<carPic.length;b++){
-    carPic.eq(b).animate({'left':a + 'px'},1.1);
-  }
-}
 

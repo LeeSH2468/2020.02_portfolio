@@ -17,17 +17,17 @@ sFormUl.css({width:100 * maxn +'%',marginLeft:'-100%'});
 sFormLi.css({width:100 / maxn + '%'});
 
 //------------------------
-const MoveSlide = function(n,bool){
+const MoveSlide = function(sn,bool){
   indiLi.removeClass('action');
-  indiLi.eq(n-1).addClass('action');
+  indiLi.eq(sn-1).addClass('action');
 
-  sFormUl.animate({'marginLeft' : (-100 * n) + '%'},function(){
-    if(n <=-1){
-      n=maxn -2;
+  sFormUl.animate({'marginLeft' : (-100 * sn) + '%'},function(){
+    if(sn <=-1){
+      sn=maxn -2;
     }
     sFormLi.removeClass('action');
     setTimeout(function(){
-      sFormLi.eq(n).addClass('action');
+      sFormLi.eq(sn).addClass('action');
     });
   });
 }// MoveSlide() ==========================
@@ -38,7 +38,7 @@ const Goslide = function(){
     myn++
     if(myn >=maxn){myn = 0;
     sFormUl.css({'marginLeft':'0'},function(){
-      sFormUl.animate({'marginLeft' : (-100 * n) + '%'});
+      sFormUl.animate({'marginLeft' : (-100 * sn) + '%'});
     });
     }
     MoveSlide(myn, true);
@@ -59,26 +59,26 @@ sForm.on('mouseleave',function(){
 
 // 버튼 클릭
 //=====================
-let n=0;
+let sn=0;
 sBtn.on('click',function(e){
   e.preventDefault();
   Stopslide();
   let hNext = $(this).hasClass('next');
 
   if(hNext){
-    n++;
-    sFormUl.stop().animate({'marginLeft':(-100 * n) + '%'},function(){
-      if(n >=maxn){
-        n = 0;
-        sFormUl.css({'marginLeft':(-100 *n)+'%'});
+    sn++;
+    sFormUl.stop().animate({'marginLeft':(-100 * sn) + '%'},function(){
+      if(sn >=maxn){
+        sn = 0;
+        sFormUl.css({'marginLeft':(-100 *sn)+'%'});
         }
     });
-    MoveSlide(n, true);
+    MoveSlide(sn, true);
   }else{
-    n--;
-    sFormUl.stop().animate({'marginLeft':(-100 * n) + '%'},function(){
-      if(n <=-1){
-        n = 0;
+    sn--;
+    sFormUl.stop().animate({'marginLeft':(-100 * sn) + '%'},function(){
+      if(sn <=-1){
+        sn = 0;
         sFormUl.css({'marginLeft':(100 *maxn)+'%'});
         }
     });

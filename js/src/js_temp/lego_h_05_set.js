@@ -117,7 +117,7 @@ for(let i = 0;i<4;i++){
 //클릭시 배너 움직이게 만들기
 // -------------------------
 
-n=0;
+setn=0;
 const setBtn = setForm.children('.s_btn').find('button');
 setBtn.on('click',function(e){
   e.preventDefault();
@@ -127,18 +127,18 @@ setBtn.on('click',function(e){
   let hPrev = $(this).hasClass('prev');
 
   if(hNext){
-    n++;
-    setUl.stop().animate({'marginLeft':(-100 * n) + '%'});
-      if(n>=setLi.length-2){
+    setn++;
+    setUl.stop().animate({'marginLeft':(-100 * setn) + '%'});
+      if(setn>=setLi.length-2){
         setBtn.eq(0).css({display:'none'});
         setBtn.eq(1).css({display:'block'});
       }else{
         setBtn.css({display:'block'});
       }
   }else if(hPrev){
-    n--;
-    setUl.stop().animate({'marginLeft':(-100 * n) + '%'});
-    if(n <=0){
+    setn--;
+    setUl.stop().animate({'marginLeft':(-100 * setn) + '%'});
+    if(setn <=0){
       setBtn.eq(1).css({display:'none'});
       setBtn.eq(0).css({display:'block'});
     }else{
