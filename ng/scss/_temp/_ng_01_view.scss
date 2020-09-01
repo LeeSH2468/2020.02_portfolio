@@ -1,0 +1,30 @@
+#view_area{position:relative; width: 100%;background-color: #aad;
+  
+  @include mobile{height:580px;}
+  @include tablet{height:760px;}
+  @include labtop{height:900px;}
+  @include pcfull{height:900px;}
+>.view_pic_bg{position:absolute; width: 100%; height: 100%; 
+  $u :"../../img/main_img/view_distant.jpg"; 
+  @include bg_base($url:$u,$s:cover);
+  &:after,&::after{content:" "; display:block; position: absolute; z-index:0; bottom:0; width: 100%; height: 100px;background-image:linear-gradient(rgba(17,17,17,0),$black);}
+
+}
+>.view_pic_logo{position:absolute; left:0; right:0; top:20%; margin:auto; width:50vw; height:20vw;
+  $u:"../../img/ng_logo_w.svg";
+  @include bg_base($u,50% 50%,100% auto);}
+>ul{position: absolute; z-index: 500; bottom:10%; left:50%; transform:translateX(-50%); width:auto; height: auto;
+  @include labtop{width:(290px*3)+(40px*2);bottom:20%;}
+  @include pcfull{width:(380px*3)+(70px*2);bottom:20%;}
+  >li{text-transform: uppercase; box-sizing: border-box;
+  @include mobile{@include button_w(270px,50px); margin-bottom:30px;}
+  @include tablet{@include button_w(430px,50px); margin-bottom:30px;}
+  @include labtop{@include button_w(290px,50px);float: left; margin-right: 40px;}
+  @include pcfull{@include button_w(380px,50px);float: left; margin-right: 70px; }
+  &:last-child{margin-right:0; margin-bottom:0;}
+  >a{@include aLink; @include text_c;}
+  >a:hover,>a:focus{color:$black;}
+  
+    }//li
+  }//ul
+}//view_area

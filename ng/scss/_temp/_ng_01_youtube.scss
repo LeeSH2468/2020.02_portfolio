@@ -1,0 +1,80 @@
+hr{width: 100%;  height:2px; margin-top: -2px;
+  background-image:linear-gradient(90deg, $gradation);border-bottom:0; 
+ 
+  border:0;}
+
+$c:4;
+#youtube_area{width: 100%; height: auto; padding-top:50px;padding-bottom:100px; background-color: $black; 
+>h3{@include h3; position:relative; text-align: center; margin-bottom:20px;
+  @include mobile{@include h5};
+&:after,&::after{
+@include mobile{@include y_line($w:70px,$h:1px,$b:-30px)}
+@include tablet{@include y_line($w:100px,$b:-30px)}
+@include labtop{@include y_line($b:-60px)}
+@include pcfull{@include y_line($b:-60px)}
+    }}
+&>.slide_frame{position: relative; width: auto;height: auto;
+      $c:4;$w:14px;$m:16px;
+  >.indicator{ position:absolute; bottom:0px;left:100px; right:0;
+    width: ($w + $m) * $c - $m; height:$w;margin:auto;
+    @include mobile{display: none;}
+    @include tablet{display: none;}
+    >ul{width: 100%;height:100%; margin:10px auto;}
+    li{float:left; width:$w; height:$w*1.6;margin:auto; margin-right:$m; background-color: $white;
+    &:last-child{margin-right:0;}
+    >a{display:block; width: 100%; height: 100%;}
+  }
+    li.action{background-color: $primary;}
+  }//indicator
+ >.slide_form{position: relative; width: 66vw; height: 30vw; margin:auto;
+  overflow: hidden;
+  
+  >.guide{position:relative; width:100% * $c; height: 100%;
+    >.banner{float:left; width: 100% / $c;height: 100%;
+
+      
+      >.y_img_zone {
+        @include bg_base2($s:auto 80%);
+        @include labtop{float:left; width: 48%; height: 100%;}
+        @include pcfull{float:left; width: 48%; height: 100%;}}
+      >.y_title_area{ 
+        @include mobile{position: absolute; bottom:0; width: 100%; height: 30%; padding:10px; box-sizing: border-box;background-color: $opacity;;}
+        @include tablet{position: absolute; bottom:0; width: 100%; height: 30%; padding:30px; box-sizing: border-box;background-color: $opacity;}
+        @include labtop{float:right; width: 50%; height: 100%;}
+        @include pcfull{float:right; width: 50%; height: 100%;}
+      >.text_zone{
+        @include mobile{width: 100%; height: 70%;}
+        @include tablet{float:left;width: 70%; height: 30%;}
+        @include labtop{width: 100%; height: auto; margin-top:100px;} 
+        @include pcfull{width: 100%; height: auto; margin-top:200px;}
+        >h4{
+          @include mobile{@include h5; text-align: center;}
+          @include tablet{@include h4;}
+          @include labtop{@include h3;}
+          @include pcfull{@include h2;}
+        }
+        >p{@include text_c;
+          @include mobile{display:none;}
+          @include tablet{@include text_l;}
+          @include pcfull{margin-bottom:20px;} }
+      }//text_zone
+      >.y_link{
+        @include mobile{display:none;}
+        @include tablet{float:right; width: 30%; height: 100%; margin-top:30px;}
+        @include labtop{}
+        >a{@include aLink; @include button_b(180px,40px);@include text_m_bold($black);
+          @include labtop{@include button_b(230px,40px);}
+          @include pcfull{@include button_b(250px,60px); line-height: 350%;}}
+          }//y_link
+       }//.y_title_area
+      }//banner
+    }//guide   
+    >.slide_btn{position:absolute; z-index: 100; top:50%; width: 100%; height: 0px; 
+      $u:'../../img/main_img/';
+  >button{float:left; width: 60px; height: 60px; transform:translateY(-50%);@include bg_base($url:$u+'arrow_l.png'); }
+  >.next{float:right;@include bg_base($url:$u+'arrow_r.png')}}
+  }//slide_form
+
+
+}
+}//.youtube_area

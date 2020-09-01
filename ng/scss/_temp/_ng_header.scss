@@ -1,0 +1,123 @@
+//national_header.scss
+$imgUrl:'../../img/';
+#headBox{position:relative; z-index:1000;  width: 100%; box-sizing: border-box;
+@include mobile{padding:0 10px;}
+@include pcfull{padding:0 300px;}
+}
+
+h1{float:left; width: 175px; height: 50px; background-size:cover;margin:14px 0 0 40px;
+  $u:"../../img/ng_logo_w.svg";
+  $u2:"../../img/ng_logo_box.svg";
+  @include bg_base($u);
+  >a{display:block; width: 100%;height: 100%;}//a
+@include mobile{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden; @include bg_base($u2);padding-left:0; margin:10px 0 0;}
+@include tablet{position:absolute; left:50%; transform:translateX(-50%);  width: 36px; overflow:hidden; @include bg_base($u2);padding-left:0; margin:10px 0 0;}
+}//h1
+
+#gnb{position: absolute;  top:0; right:0; width: auto; height: auto;
+  @include pcfull{right:150px;}
+
+  .menuiconbtn{position:absolute; display: block; width:50px; height:36px;@include labtop{display:none;}
+  @include pcfull{display:none;}
+              top: 20px; right:20px; 
+    >button{width: 100%; height:100%; position: absolute;}
+    .line{position: absolute; right: 0; transform-origin:right;
+      width: 100%; height: 6px; background-color: $primary;
+      transition:all 300ms ease;
+      border-radius:3px; 
+      &.gnb_line_01{top:0; }   
+      &.gnb_line_02{top: 50%; margin-top: -3px;}
+      &.gnb_line_03{bottom:0;}       
+    }
+  }
+  &.on .line {
+    &.gnb_line_01{width:120%; top:0; transform:rotate(-30deg)}   
+      &.gnb_line_02{top: 50%; margin-top: -3px; height: 0;}
+      &.gnb_line_03{width:120%; bottom:0;transform:rotate(30deg)}       
+  }
+
+  // nav 목록
+  >ul{width: auto; height: auto; margin-top:20px;
+    >li{float: left; position:relative; width: auto; height: auto; padding-right:60px; @include link;
+    &:after,&::after{content:" "; display:block; position:absolute; top:5px; right:30px; width:2px; height:20px; background-color:$primary;}//li after
+    &:last-child:after,&:last-child::after{content:" "; display:none;}//last li after
+    >a{@include link;}
+    }//li
+  @include mobile{display:none;}
+  @include tablet{display:none;}
+  }//ul
+}//#gnb
+
+#gnb.on{position:fixed; z-index:1200; width: 100%; height:100%; margin:0; background-color:#222;
+        box-sizing:border-box;/* transition:all 1000ms ease; */
+>ul{display:block;width: auto; height: 100%; padding-top:120px; box-sizing: border-box; 
+>li{display:block; width: 100%; height: auto;margin-top:10px; margin-bottom:10px;text-align:center;
+&:after,&::after{display:none}
+>a{padding:20px 0; @include aLink}}}
+>button{float:right;}
+label{float:right;}
+
+}//gnb.on
+
+//m_popup
+/* magazinge popup ========================= */
+.m_popup{display:none; position: absolute; top:250px; left:0; right:0; margin:0 auto; z-index: 10000; width: 900px; height: 300px; background-color: #555;
+  @include mobile{width: 100%; height: 100%; top:0; background-color: #333;}
+>.m_close_btn{position: absolute; top:0; right:0; z-index:100; width: 70px; height: 70px;
+  @include bg_base('../../img/close_basic.svg',$s:60% 60%);
+  &:hover,&:focus{@include bg_base('../../img/close_hover.svg',$s:60% 60%)}}//m_close_btn
+>div{float:left; width: 448px; height: 100%; margin-right:4px; background-color: $opacity;
+  @include mobile{width: 100%; height: 50%;}
+  &:hover,&:focus{background-color:$primary}
+  &:last-of-type{float:right; margin-right:0;}
+  >a{@include aLink}
+  .origin_img{@include bg_base($url:$imgUrl+'magazine_w.svg',$s:auto 65%,$p:50% 20%);
+  &:hover{@include bg_base($url:$imgUrl+'magazine_b.svg',$s:auto 65%,$p:50% 20%);}}
+  .traver_img {@include bg_base($url:$imgUrl+'magazine_t_w.svg', $s:auto 65%,$p:50% 20%);
+  &:hover{@include bg_base($url:$imgUrl+'magazine_t_b.svg', $s:auto 65%,$p:50% 20%);}}
+}}//m_popup
+
+
+.m_name{position: absolute; bottom:0; width: 50%; text-align:center; line-height: 100px; @include text_c;
+&:before,&::before{content:" "; display:block; position: absolute; top:36px; left:50px; width: 2px; height: 30px; background-color: $primary;}
+&:after,&::after{content:" "; display:block; position: absolute; top:36px; right:50px; width: 2px; height: 30px; background-color: $primary;}
+}//.m_name
+.maga_m{@include mobile{top:40%; left:50%; transform:translateX(-50%);
+&:before,&::before{left:-10%;}
+&:after,&::after{right:-10%;}}}//.maga_m
+.maga_t{@include mobile{bottom:8%; left:50%; transform:translateX(-50%); line-height: 20px; 
+&:before,&::before{top:0;left:-10%;}
+&:after,&::after{top:0;right:-10%;}}}//,aga_t
+
+ /* store popup ======================== */
+
+ .s_popup{display:none;position:absolute; top:250px; left:0; right:0; margin:0 auto; z-index: 10000; width: 900px; height: 300px; background-color: #555; padding: 0; margin:auto;
+  @include mobile{width: 100%; height: 100%; top:0; background-color: #333;}
+>div{position: relative; float:left; width: 33%; height: 100%; margin-right:4px; background-color: $opacity;
+  @include mobile{width: 100%; height: calc(100% / 3);}
+  &:hover,&:focus{background-color:$primary}
+  &:last-of-type{float:right; margin-right: 0;}
+  >a{@include aLink}
+  .apparel_img {@include bg_base($url:$imgUrl+'apparel-w.svg', $s:auto 50%,$p:50% 25%);
+  &:hover{@include bg_base($url:$imgUrl+'apparel-b.svg',$s:auto 50%,$p:50% 25%);}}
+  .acce_img{@include bg_base($url:$imgUrl+'acceimg-w.png',$s:auto 60%,$p:50% 25%);
+  &:hover{@include bg_base($url:$imgUrl+'acceimg-b.png',$s:auto 60%,$p:50% 25%);}}
+  .brend_img{@include bg_base($url:$imgUrl+'ng_logo_box.png',$s:auto 50%,$p:50% 25%);
+  &:hover{@include bg_base($url:$imgUrl+'ng_logo_box_b.png',$s:auto 50%,$p:50% 25%);}}
+
+
+}
+
+>.s_close_btn{position: absolute; top:0; right:0; z-index:100; width: 70px; height: 70px;
+  @include bg_base('../../img/close_basic.svg',$s:60% 60%);
+  &:hover,&:focus{@include bg_base('../../img/close_hover.svg',$s:60% 60%)}}}
+
+.s_name{position: absolute; bottom:0; left:0; right:0; margin:auto; text-align:center; line-height: 100px; @include text_c;
+&:before,&::before{content:" "; display:block; position: absolute; top:36px; left:8%; width: 2px; height: 30px; background-color: $primary;
+@include mobile{left:20%}}
+&:after,&::after{content:" "; display:block; position: absolute; top:36px; right:8%; width: 2px; height: 30px; background-color: $primary;
+@include mobile{right:20%}}
+}
+
+
+

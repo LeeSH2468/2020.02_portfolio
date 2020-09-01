@@ -1,0 +1,17 @@
+@import "./_basic/var";
+@import "./_basic/mixin";
+@import "./_basic/etc";
+
+
+#wrap{width: 100%; height: auto;}
+#headBox{position: absolute;top:0; left:0; z-index:1000;}
+#conBox{width: 100%; height: auto; background-color: $black;}
+#footBox{width: 100%; height: 300px; max-height: 300px;}
+
+@import "./_temp/ng_header";
+@import "./_temp/ng_01_view";
+@import "./_temp/ng_01_society";
+@import "./_temp/ng_01_intro";
+@import "./_temp/ng_01_youtube";
+@import "./_temp/ng_footer";
+/* ng_01_main.css */

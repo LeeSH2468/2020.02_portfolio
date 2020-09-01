@@ -1,0 +1,41 @@
+#footBox{padding:50px; box-sizing:border-box; background-color: $black; border-top:1px solid $gray;
+  @include labtop{height: 200px;}
+  @include pcfull{height: 200px;}}//footBox
+
+.foot_logo{width: 150px; height: 50px;
+  @include bg_base("../../img/ng_logo_g.png");
+  @include mobile{margin:auto;}
+@include tablet{margin:auto;}
+@include labtop{float:left;}
+@include pcfull{float:left;}}//foot_logo
+
+.snsb{height: auto; margin:auto;
+  @include mobile{width: 100%;}
+  @include tablet{width: 100%;}
+  @include labtop{float:right;width: auto;}
+  @include pcfull{float:right;width: auto;}
+  $c:3; $w:50px;$m:10px;
+>ul{width: ($w+$m)*$c -$m; height: auto; margin:auto;
+   @include mobile{margin-top:20px;}
+   @include tablet{margin-top:20px;}
+  >li{float:left;width:$w; height: 50px; font-size:40px; margin-right:$m;
+  &:last-child{margin-right:0}
+  }
+  }
+}//.snsb
+$w: 150px;
+.foot_info_area{float:left;width: 100%; height: auto; margin:20px auto;
+  >ul{height: auto; margin:auto;
+     @include mobile{width: $w*2;}
+     @include tablet{width: $w*2;}
+     @include labtop{width: 100%;}
+     @include pcfull{width: 100%;}
+     
+    >li{float:left; width: $w; height: auto; margin:auto; text-align:center;
+      >a{@include aLink}}
+  }
+  >.copyright{display:block;height: auto; margin:auto; @include text_c($gray);
+     @include mobile{width: $w*2;text-align:center;@include text_l($gray)}
+     @include tablet{width: $w*2;text-align:center;@include text_l($gray)}
+     @include labtop{width: 100%;}
+     @include pcfull{width: 100%;}}}

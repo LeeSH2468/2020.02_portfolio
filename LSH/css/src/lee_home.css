@@ -1,0 +1,320 @@
+#wrap {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif; }
+
+#headBox {
+  position: fixed;
+  z-index: 100;
+  right: -310px;
+  top: 50%;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #AD191E;
+  border-radius: 100%;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%); }
+  #headBox h1 {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    transform: translateY(-50%);
+    transition: transform 300ms cubic-bezier(0.68, -0.55, 0.27, 1.55); }
+    #headBox h1 a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url("../../img/my_logo.svg");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  #headBox #gnb {
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+    margin-left: -30px; }
+    #headBox #gnb > ul {
+      width: auto;
+      height: auto; }
+      #headBox #gnb > ul > li {
+        width: auto;
+        height: auto;
+        margin-bottom: 60px; }
+        #headBox #gnb > ul > li:nth-child(2) {
+          margin-left: -50px; }
+        #headBox #gnb > ul > li:nth-child(3) {
+          margin-left: -60px; }
+        #headBox #gnb > ul > li:nth-child(4) {
+          margin-left: -26px; }
+        #headBox #gnb > ul > li > a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          font-size: 1.3rem;
+          text-transform: uppercase;
+          color: #AD191E; }
+
+#viewBox {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  background-image: url("../../img/view_box.svg"); }
+
+#workBox {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  position: relative; }
+  #workBox > h2 {
+    text-align: center;
+    font-size: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #171717;
+    text-transform: uppercase; }
+  #workBox > .ng_area {
+    width: 100%;
+    height: 50%; }
+    #workBox > .ng_area > .view_area {
+      float: left;
+      width: 50%;
+      height: 80%; }
+      #workBox > .ng_area > .view_area > .view_img {
+        width: auto;
+        height: 100%;
+        perspective: 1500px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+        background-image: url("../../img/work_img_ng.png"); }
+    #workBox > .ng_area > .text_area {
+      float: left;
+      width: 40%;
+      height: 50%;
+      padding: 100px;
+      padding-top: 50px;
+      box-sizing: border-box; }
+      #workBox > .ng_area > .text_area h3 {
+        font-size: 30px;
+        font-size: 1.875rem;
+        font-weight: bold;
+        color: #171717;
+        margin-bottom: 20px; }
+      #workBox > .ng_area > .text_area p {
+        font-size: 18px;
+        font-size: 1.125rem;
+        color: #171717;
+        word-break: keep-all;
+        margin-bottom: 50px; }
+      #workBox > .ng_area > .text_area .btn_zone {
+        width: 100%;
+        height: auto; }
+        #workBox > .ng_area > .text_area .btn_zone li {
+          float: left;
+          width: 150px;
+          height: 50px;
+          border: 1px solid #AD191E;
+          box-sizing: border-box; }
+          #workBox > .ng_area > .text_area .btn_zone li.work_btn {
+            margin-left: 20px; }
+          #workBox > .ng_area > .text_area .btn_zone li > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 18px;
+            font-size: 1.125rem;
+            font-weight: bold;
+            color: #AD191E;
+            word-break: keep-all;
+            text-align: center;
+            line-height: 46px; }
+  #workBox > .lego_area {
+    width: 100%;
+    height: 50%; }
+    #workBox > .lego_area > .view_area {
+      float: left;
+      width: 50%;
+      height: 80%; }
+      #workBox > .lego_area > .view_area > .view_img {
+        width: auto;
+        height: 100%;
+        perspective: 1500px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: contain;
+        background-image: url("../../img/work_img_lego.png"); }
+    #workBox > .lego_area > .text_area {
+      float: left;
+      width: 40%;
+      height: 50%;
+      padding: 100px;
+      padding-top: 50px;
+      box-sizing: border-box; }
+      #workBox > .lego_area > .text_area h3 {
+        font-size: 30px;
+        font-size: 1.875rem;
+        font-weight: bold;
+        color: #171717;
+        margin-bottom: 20px; }
+      #workBox > .lego_area > .text_area p {
+        font-size: 18px;
+        font-size: 1.125rem;
+        color: #171717;
+        word-break: keep-all;
+        margin-bottom: 50px; }
+      #workBox > .lego_area > .text_area .btn_zone {
+        width: 100%;
+        height: auto; }
+        #workBox > .lego_area > .text_area .btn_zone li {
+          float: left;
+          width: 150px;
+          height: 50px;
+          border: 1px solid #AD191E;
+          box-sizing: border-box; }
+          #workBox > .lego_area > .text_area .btn_zone li.work_btn {
+            margin-left: 20px; }
+          #workBox > .lego_area > .text_area .btn_zone li > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 18px;
+            font-size: 1.125rem;
+            font-weight: bold;
+            color: #AD191E;
+            word-break: keep-all;
+            text-align: center;
+            line-height: 46px; }
+
+#skillBox {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  background-color: #fff; }
+  #skillBox > h2 {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-size: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #171717;
+    text-transform: uppercase; }
+  #skillBox > .text_area {
+    width: 100%;
+    height: 90%; }
+    #skillBox > .text_area > p {
+      width: auto;
+      height: auto;
+      text-align: center;
+      font-size: 26px;
+      font-size: 1.625rem;
+      font-weight: bold;
+      color: #171717; }
+    #skillBox > .text_area > ul {
+      width: 960px;
+      height: auto;
+      margin: auto;
+      margin-top: 150px; }
+      #skillBox > .text_area > ul > li {
+        float: left;
+        width: 300px;
+        height: 100px;
+        margin-right: 30px; }
+        #skillBox > .text_area > ul > li:nth-child(3n) {
+          margin-right: 0; }
+        #skillBox > .text_area > ul > li > p {
+          float: left;
+          font-size: 18px;
+          font-size: 1.125rem;
+          font-weight: bold;
+          color: #171717;
+          word-break: keep-all; }
+        #skillBox > .text_area > ul > li > div {
+          position: relative;
+          float: right;
+          margin-top: 6px;
+          width: 200px;
+          height: 16px;
+          border: 1px solid #AD191E;
+          border-radius: 16px;
+          overflow: hidden; }
+          #skillBox > .text_area > ul > li > div > div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: rgba(173, 25, 30, 0.7); }
+
+#aboutBox {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  background-color: #ddd; }
+  #aboutBox > h2 {
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-size: 40px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #171717;
+    text-transform: uppercase;
+    margin-bottom: 50px; }
+  #aboutBox > .text_area {
+    width: auto;
+    min-width: 960px;
+    height: 85%;
+    margin: auto; }
+    #aboutBox > .text_area > .title_zone {
+      width: 960px;
+      height: 10%;
+      margin: auto; }
+      #aboutBox > .text_area > .title_zone > li {
+        float: left;
+        width: 320px;
+        height: 40px;
+        border: 1px solid #AD191E;
+        box-sizing: border-box; }
+        #aboutBox > .text_area > .title_zone > li > button {
+          width: 100%;
+          height: 100%;
+          font-size: 18px;
+          font-size: 1.125rem;
+          color: #AD191E;
+          word-break: keep-all;
+          text-transform: uppercase; }
+      #aboutBox > .text_area > .title_zone > .action {
+        background-color: #AD191E; }
+        #aboutBox > .text_area > .title_zone > .action > button {
+          color: #fff; }
+    #aboutBox > .text_area > .con_zone {
+      position: relative;
+      width: 100%;
+      height: 90%; }
+      #aboutBox > .text_area > .con_zone li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+        background-size: 70% auto; }
+      #aboutBox > .text_area > .con_zone .profile {
+        background-image: url("../../img/profile_profile.svg"); }
+      #aboutBox > .text_area > .con_zone .history {
+        background-image: url("../../img/profile-history.svg"); }
+      #aboutBox > .text_area > .con_zone .personal {
+        background-image: url("../../img/profile_personal.svg"); }

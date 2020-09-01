@@ -1,0 +1,40 @@
+@mixin h2($c:$black){text-align: center;
+  font-size:40px; font-size:2.5rem; font-weight:bold; color:$c; text-transform:uppercase
+} 
+@mixin h3($c:$black){
+  font-size:30px; font-size:1.875rem; font-weight:bold; color:$c; 
+}
+@mixin h4($c:$black){text-align: center;
+  font-size:26px; font-size:1.625rem; font-weight:bold; color:$c;
+}
+
+
+@mixin text_con($c:$black){
+  font-size:20px; font-size:1.25rem; color:$c; word-break:keep-all;
+}
+
+@mixin text_m_bold($c:$black){
+  font-size:18px; font-size:1.125rem; font-weight:bold; color:$c; word-break:keep-all;
+}
+@mixin text_m($c:$black){
+  font-size:18px; font-size:1.125rem; color:$c; word-break:keep-all;
+}
+@mixin sub_title($deg:-10deg){ text-transform:uppercase;  @include h3; transform:rotate($deg);
+  &::first-letter{color:$primary}
+}
+
+@mixin main_bg{width: 100%; height:100%; padding:50px; padding-top:100px; box-sizing:border-box;}
+
+
+ //배경이미지
+ @mixin bg_base($url,$p:50% 50%,$s:contain,$r:no-repeat){
+  background-repeat:$r;
+  background-position:$p;
+  background-size:$s;
+  background-image:url($url);
+}
+@mixin bg_base2($p:50% 50%,$s:contain,$r:no-repeat,$p:50% 50%){
+ background-repeat:$r;
+ background-position:$p;
+ background-size:$s
+}

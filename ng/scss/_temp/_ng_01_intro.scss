@@ -1,0 +1,83 @@
+#intro_sub_area{width: 100%;height: auto; background-color: $black; padding-top:300px;padding-bottom:400px; box-sizing:border-box;
+    @include labtop{ @include bg_base($url:'../../img/main_img/intro_bg.png',$s:auto 100%);}
+    @include pcfull{ @include bg_base($url:'../../img/main_img/intro_bg.png',$s:auto 100%);}
+   
+>.sub_image{position:relative; width: 80%; height:auto; margin:auto;
+    @include mobile{width: 100%; height: 340px; margin-bottom:100px;background-color: $opacity; box-sizing:border-box;}
+    @include tablet{width: 100%; height: 370px; margin-bottom:100px;background-color: $opacity; box-sizing:border-box; padding:30px;}
+&>dl{width: 50%; height: 500px; margin:auto; margin-bottom:150px; padding:30px; box-sizing: border-box; text-align: center;
+    @include mobile{width:80%;}
+    @include tablet{width:80%;}
+    >dt{ position: relative;
+        @include mobile{@include h5;text-transform:uppercase;
+            &:after,&::after{
+            @include mobile{@include y_line($w:70px,$h:1px,$b:-20px)}}}
+        @include tablet{@include h4;
+             &:after,&::after{
+            @include tablet{@include y_line($w:100px,$b:-20px)}}}
+        @include labtop{@include sub_title}
+        @include pcfull{@include sub_title}
+
+
+
+        }
+    &>dd{@include text_c; width: 420px; height: 350px; padding:50px; box-sizing: border-box; background-color: $opacity; margin:auto;
+    @include mobile{width: 100%;padding:40px 0; background-color:transparent;}
+    @include tablet{width: 100%;padding:40px 0; background-color:transparent;}
+    &>a{display: block; @include button_b(240px,40px); @include text_m_bold($black); margin:50px auto;
+        @include mobile{}
+        @include tablet{}
+    }}
+ }//dl
+ position: relative; z-index: 100;
+}//.sub_image
+@mixin sub_image{
+    .sub_image01{@include bg_base($url:'../../img/main_img/info_c.png',$s:cover);}
+    .sub_image02{@include bg_base($url:'../../img/main_img/info_m.jpg',$s:cover);}
+    .sub_image03{@include bg_base($url:'../../img/main_img/info_a.jpg',$s:cover);}
+}
+@include mobile{@include sub_image; 
+ .sub_image:before, .sub_image::before{content:" "; display:block;  position:absolute; top:0; left:0; z-index:-1;width: 100%; height: 100%; background-color: $opacity;}}
+@include tablet{@include sub_image; position: relative; z-index: 100;
+ .sub_image:before, .sub_image::before{content:" "; display:block; position:absolute; top:0; left:0; z-index:-1; width: 100%; height: 100%; background-color: $opacity;}}
+
+}//.intro_sub_area
+
+
+.sub_pic{position:absolute;z-index:100; top:30px; width:50%; height: 500px;
+     
+@include mobile{display:none;}
+@include tablet{display:none;}
+&>.pic_zone{width: 800px; height: 100%; z-index:100;
+   }
+}//div
+
+@mixin be_box($l){content:" "; display:block; position:absolute; top:50%;left:$l; z-index:-1;transform:translateY(-50%);width: 350px; height: 500px; border:26px solid $primary}
+
+.sub_02:before,.sub_02::before{@include be_box($l:420px);}
+.sub_01:before,.sub_01::before,.sub_03:before,.sub_03::before{@include be_box($l:0px);}
+
+.pic_01{ @include bg_base("../../img/main_img/info_c.png",$s:80% auto);}
+.pic_02{ @include bg_base("../../img/main_img/info_m.jpg",$s:80% auto);}
+.pic_03{ @include bg_base("../../img/main_img/info_a.jpg",$s:80% auto);}
+//=========================
+//action
+@mixin dl_base{
+.sub_image:nth-of-type(2n+1)>div{left:0vw; /*opacity:0;*/}
+.sub_image:nth-of-type(2n+1)>dl{float:right; /*opacity:0;*/ transform:translateX(10vw)}
+.sub_image:nth-of-type(2n)>div{right:10vw; /*opacity:0;*/}
+.sub_image:nth-of-type(2n)>dl{float:left; /*opacity:0;*/transform:translateX(-10vw)}
+}
+
+
+@mixin dl_action{
+.sub_image:nth-of-type(2n+1)>div.action{left:8vw;}
+.sub_image:nth-of-type(2n)>div.action{right:0;}
+.sub_image>div.action{opacity: 1; transition: all 500ms ease;}
+.sub_image>dl.action{transform:translateX(0); opacity:1;transition: all 500ms ease;}}
+
+@include labtop{@include dl_base; @include dl_action}
+@include pcfull{@include dl_base; @include dl_action}
+
+
+
